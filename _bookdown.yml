@@ -1,4 +1,4 @@
-book_filename: "bookdown-start"
+book_filename: "Microbiome Analysis Using R"
 chapter_name: "Chapter "
 repo: https://github.com/shandley/microbiome_analysis_using_R
 output_dir: docs
