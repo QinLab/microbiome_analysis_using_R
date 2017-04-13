@@ -10,3 +10,7 @@ link-citations: yes
 github-repo: shandley/microbiome_analysis_using.R
 description: "Microbiome analysis using R."
 ---
+
+# Preface {-}
+
+This book was designed to provide instruction and examples on how to process 16S amplicon data in R for microbial community ecology studies.
