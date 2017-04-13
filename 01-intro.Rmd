@@ -1,3 +1,9 @@
 # Introduction
 
 16S amplicon studies have become common ...
+
+## What this book is
+
+The material in the book is focused heavily on the use of [PhyloSeq objects](https://joey711.github.io/phyloseq/import-data.html). PhyloSeq objects are a useful way to represent and integrate various types of data (e.g. operational taxonomic units or resolved sequence variant counts, taxonomy at various ranks, study variables and data, phylogenetic trees) into a single resource which can be accessed using functions in PhyloSeq, or extracted from to be used with other R packages (e.g. [ggplot2](http://ggplot2.tidyverse.org/reference/), [vegan](https://cran.r-project.org/web/packages/vegan/index.html)).
+
+## What this book isn't
