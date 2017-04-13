@@ -13,4 +13,6 @@ description: "Microbiome analysis using R."
 
 # Preface {-}
 
-This book was designed to provide instruction and examples on how to process 16S amplicon data in R for microbial community ecology studies.
+This book was designed to provide instruction and examples on how to process 16S amplicon data in R for microbial community ecology studies. The material was developed during over a period from Fall 2016 through Summer 2017 and represents a sythesis of material obtained during training at the 2017 Workshop on Genomics [link]http://evomics.org and through forum posts across the internet. In particular, the PhyloSeq and dada2 github issues page.
+
+The material in the book is focused heavily on the use of PhyloSeq objects. PhyloSeq objects are a useful way to represent and integrate various types of data (e.g. OTU/RSV counts, taxonomy at various ranks, study variables and data, phylogenetic trees) into a single resource which can be accessed using functions in PhyloSeq, or extracted from to be used with other R packages (e.g. ggplot2, vegan).
