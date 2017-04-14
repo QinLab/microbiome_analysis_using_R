@@ -9,11 +9,10 @@ The content is designed to piece together disparate packets of knowledge gathere
 ## 1. Preface
 
 ## 2. Introduction
-
-  2.1 Motivation
-  2.2 What This Book Isn't
-  2.3 What This Book Is
-  2.4 Approaching a Study in Microbial Ecology
+* Motivation
+* What This Book Isn't
+* What This Book Is
+* Approaching a Study in Microbial Ecology
   
 ## 3. General Skills
 
