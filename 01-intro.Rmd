@@ -13,6 +13,8 @@ The [R programming language](https://www.r-project.org) provides a set of tools 
 
 ## Motivation
 
+This book was written as a result of approximately 1 year of experience using a combination of QIIME and R to analyze 16S amplicon survery data generated to ask questions about what bacterial communities look like on mucosal surfaces of HIV infected patients. In addition, material had been produced for training [Workshops](http://evomics.org) over the past several years which made it apparent that a single software solution was not always sufficient for completion of a robust analysis. In the process of researching and training, it became apparent that there were a variety of resources (e.g. vignettes, forum posts). avaiable to assist researchers in pursuing the daunting task of integrating software and algorithmic solutions to their analysis, but these were disparate and frequently challenging to find. Thus, this book represents an effort to synthesize information from these experiences and resources into a cohesive unit with the hopes that others may benefit from this synthesis. 
+
 ## What this book is
 
 The material in the book is focused heavily on the use of [PhyloSeq objects](https://joey711.github.io/phyloseq/import-data.html). PhyloSeq objects are a useful way to represent and integrate various types of data (e.g. operational taxonomic units or resolved sequence variant counts, taxonomy at various ranks, study variables and data, phylogenetic trees) into a single resource which can be accessed using functions in PhyloSeq, or extracted from to be used with other R packages (e.g. [ggplot2](http://ggplot2.tidyverse.org/reference/), [vegan](https://cran.r-project.org/web/packages/vegan/index.html)).
