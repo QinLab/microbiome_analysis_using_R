@@ -1,0 +1,37 @@
+# Resources
+
+## Software Packages
+
+### Exapnsive packages
+* [QIIME](http://qiime.org)
+* [QIIME 2](https://qiime2.org)
+* [Mothur](https://www.mothur.org)
+* [PhyloSeq](https://joey711.github.io/phyloseq/)
+
+### R Libraries
+* [vegan](https://cran.r-project.org/web/packages/vegan/index.html)
+* [tidyverse](http://tidyverse.org) includes ggplot2, dplyr and many others
+* [DeSeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html)
+* [randomForest](https://bioconductor.org/packages/release/bioc/html/DESeq2.html)
+
+
+## Web sites
+
+Michelle Berry's (@mich_berr) wonderful tutorial on using PhyloSeq and R for Community Diversity Analysis: [Microbial Community Diversity Analysis Tutorial with Phyloseq](http://deneflab.github.io/MicrobeMiseq/demos/mothur_2_phyloseq.html)
+
+
+## Regular Courses/Workshops
+
+[Workshop on Genomics](http://evomics.org). Held annually in the Czech Republic.
+
+[QIIME Workshops](https://workshops.qiime.org)
+
+[EDAMAME](http://www.edamamecourse.org/docs/index.html). Course and Extensive On-line Materials. Organzied in 2014 and 2015.
+
+[STAMPS](https://stamps.mbl.edu). Held annually at the Woods Hole Marine Biological Laboratory.
+
+
+
+## Books
+
+[Numerical Ecology](https://www.elsevier.com/books/numerical-ecology/legendre/978-0-444-53868-0?start_rank=1&sortby=sortByDateDesc&cat0=environmental-science&cat1=ecology&cat2=statistical-ecology). P. Legendre and Loic Legendre. eBook ISBN: 9780444538697. Paperback ISBN: 9780444538680
