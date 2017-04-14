@@ -9,8 +9,7 @@ The content is designed to peice together disparate packets of knoweldge gathere
 1. Preface
 
 2. Inroduction
-
-  +2.1 Motivation
+    2.1 Motivation
   
   +2.2 What isn't in this book
   
