@@ -10,13 +10,13 @@ The content is designed to peice together disparate packets of knoweldge gathere
 
 2. Inroduction
 
-  2.1 Motivation
+  +2.1 Motivation
   
-  2.2 What isn't in this book
+  +2.2 What isn't in this book
   
-  2.3 What is in this book
+  +2.3 What is in this book
   
-  2.5 Approaching a study on microbial ecology
+  +2.5 Approaching a study on microbial ecology
   
   2.6 
   
