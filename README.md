@@ -6,38 +6,34 @@ The content is designed to piece together disparate packets of knowledge gathere
 
 # Table of Contents
 
-## 1. Preface
+##. Preface
 
-## 2. Introduction
+## 1. Introduction
   * Motivation
   * What This Book Isn't
   * What This Book Is
   * Approaching a Study in Microbial Ecology
   
-## 3. General Skills
+## 2. General Skills
 
   * R for Microbiome Studies
   * Useful Resources
   * Useful Libraries
   
-## 4. Data Initiation
+## 3. Data Initiation
 
-## 5. Data Assesmment and Filtering
+## 4. Data Assesmment and Filtering
 
   * Sample Filtering
   * Taxon Prevalence Filtering
   * Data Transformation
   
-## 6. Alpha Diversity
+## 5. Alpha Diversity
 
-## 7. Beta Diversity
+## 6. Beta Diversity
 
-## 8. Differential Abundance Testing
+## 7. Differential Abundance Testing
+
+## 8. Machine Learning Approaches
 
 ## 9. Reproducible Workflows
-
-
-  
-  
-
-
