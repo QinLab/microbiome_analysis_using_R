@@ -6,14 +6,12 @@ The content is designed to peice together disparate packets of knoweldge gathere
 
 # Table of Contents
 
-1. Preface
+## 1. Preface
 
-2. Inroduction
+## 2. Inroduction
+
+  2.1 Motiviation
   
-  2.1 Motivation
-  2.2 What isn't in this book
-  2.3 What is in this book
-  2.4 Approaching a study on microbial ecology
   
 
 
