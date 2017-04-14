@@ -9,24 +9,24 @@ The content is designed to piece together disparate packets of knowledge gathere
 ## 1. Preface
 
 ## 2. Introduction
-* Motivation
-* What This Book Isn't
-* What This Book Is
-* Approaching a Study in Microbial Ecology
+  * Motivation
+  * What This Book Isn't
+  * What This Book Is
+  * Approaching a Study in Microbial Ecology
   
 ## 3. General Skills
 
-  3.1 R for Microbiome Studies
-  3.2 Useful Resources
-  3.3 Useful Libraries
+  * R for Microbiome Studies
+  * Useful Resources
+  * Useful Libraries
   
 ## 4. Data Initiation
 
 ## 5. Data Assesmment and Filtering
 
-  5.1 Sample Filtering
-  5.2 Taxon Prevalence Filtering
-  5.3 Data Transformation
+  * Sample Filtering
+  * Taxon Prevalence Filtering
+  * Data Transformation
   
 ## 6. Alpha Diversity
 
