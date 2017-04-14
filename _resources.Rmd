@@ -10,12 +10,12 @@
 
 ### R Libraries and others
 * [vegan](https://cran.r-project.org/web/packages/vegan/index.html): Extensive library of ecological analysis tools.
-* [tidyverse](http://tidyverse.org) includes ggplot2, dplyr and many others.
-* [DeSeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html). Differential abundance testing.
+* [tidyverse](http://tidyverse.org): includes ggplot2, dplyr and many others.
+* [DeSeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html): Differential abundance testing.
 * [dada2](https://github.com/benjjneb/dada2). Resolve sequence variants from amplicon data.
-* [randomForest](https://bioconductor.org/packages/release/bioc/html/DESeq2.html). Perform random forest analysis on a data frame.
+* [randomForest](https://bioconductor.org/packages/release/bioc/html/DESeq2.html): Perform random forest analysis on a data frame.
 * [microbiome](https://github.com/microbiome/microbiome). Useful extensions for PhyloSeq.
-* [ampvis](http://madsalbertsen.github.io/ampvis/). An R package to visualize amplicon data. 
+* [ampvis](http://madsalbertsen.github.io/ampvis/): An R package to visualize amplicon data. 
 
 
 ## Web sites
@@ -25,16 +25,11 @@
 
 ## Regular Courses/Workshops
 
-[Workshop on Genomics](http://evomics.org). Held annually in the Czech Republic.
-
-[QIIME Workshops](https://workshops.qiime.org)
-
-[EDAMAME](http://www.edamamecourse.org/docs/index.html). Course and Extensive On-line Materials. Organzied in 2014 and 2015.
-
-[STAMPS](https://stamps.mbl.edu). Held annually at the Woods Hole Marine Biological Laboratory.
-
-
+* [Workshop on Genomics](http://evomics.org). Held annually in the Czech Republic.
+* [QIIME Workshops](https://workshops.qiime.org)
+* [EDAMAME](http://www.edamamecourse.org/docs/index.html): Course and Extensive On-line Materials. Organzied in 2014 and 2015.
+* [STAMPS](https://stamps.mbl.edu): Held annually at the Woods Hole Marine Biological Laboratory.
 
 ## Books
 
-[Numerical Ecology](https://www.elsevier.com/books/numerical-ecology/legendre/978-0-444-53868-0?start_rank=1&sortby=sortByDateDesc&cat0=environmental-science&cat1=ecology&cat2=statistical-ecology). P. Legendre and Loic Legendre. eBook ISBN: 9780444538697. Paperback ISBN: 9780444538680
+* [Numerical Ecology](https://www.elsevier.com/books/numerical-ecology/legendre/978-0-444-53868-0?start_rank=1&sortby=sortByDateDesc&cat0=environmental-science&cat1=ecology&cat2=statistical-ecology). P. Legendre and Loic Legendre. eBook ISBN: 9780444538697. Paperback ISBN: 9780444538680
