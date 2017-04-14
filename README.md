@@ -37,3 +37,5 @@ The content is designed to piece together disparate packets of knowledge gathere
 ## 8. Machine Learning Approaches
 
 ## 9. Reproducible Workflows
+
+## 10. Citations
