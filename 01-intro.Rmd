@@ -27,4 +27,3 @@ This book is also not designed to replace the well-developed [PhyloSeq vignettes
 Finally, this book is not designed to provide in-depth explanations of concepts in microbial ecology. That topic requires several books on its own. However, basic introductions to some core concepts are provided for explanatory purposes.
 
 While this book does not formally cover these concepts, there is an appendix which provides links to various resources used in the creation of the content of this book, or which one may find useful for expanding their own knowledge base.
-
