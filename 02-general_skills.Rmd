@@ -149,14 +149,25 @@ Report generation is completed by *knit*ing your R Markdown document. This is do
 
 You should also name your R chunks to keep them straight. Naming a chunk is easy as it is just any text that appears after the r and before a comma. The name of the following R chunk is *Example R chunk*.
 
+```
 ```{r Example R chunk, include=TRUE, fig.width=3, fig.height=3}
 # This R chunk will print a summary of the cars example data set
 # It will also generate a scatterplot of the cars data.
 # To exclude this from the final report change include to FALSE
+
 summary(cars)
 plot(cars)
-
 ```
+```
+
+There are a number of interesting ways to publish or share your work from R Studio including geneating web sites or interactive notebooks. This book will not detail them further, but more information can be found using the links below:
+
+* [RPubs](https://rpubs.com): Free, simple R Markdown sharing service.
+* [R Notebooks](http://rmarkdown.rstudio.com/r_notebooks.html#overview): Interactive, portable R Markdown documents.
+* [Shiny](http://rmarkdown.rstudio.com/authoring_shiny.html). Publish interactive documents which accept user input.
+* [R Markdown Web sites](http://rmarkdown.rstudio.com/rmarkdown_websites.html): HTML versions of your R Markdown documents with additional features.
+* [bookdown](https://bookdown.org/yihui/bookdown/): Used to generate this book
+* [R presentations](https://support.rstudio.com/hc/en-us/articles/200486468-Authoring-R-Presentations). Make slide decks directly in R Studio
 
 
 
