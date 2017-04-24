@@ -22,6 +22,9 @@ R has several IDE options. The material in this book will focuse on one, [RStudi
 
 The value of using an IDE for R can not be overstated. A well-developed IDE, such as RStudio will enable you to work seemlessly with your data, manage your packages and document and publish your work either as a static document or to a web-site.
 
+```{r}
 knitr::include_graphics("./figures/ch02_rstudio_example.jpg")
+```
+
 
 
