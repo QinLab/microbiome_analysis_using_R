@@ -17,11 +17,11 @@
 * [microbiome](https://github.com/microbiome/microbiome). Useful extensions for PhyloSeq.
 * [ampvis](http://madsalbertsen.github.io/ampvis/): An R package to visualize amplicon data. 
 
-
 ## Web sites
 
 * Michelle Berry's (@mich_berr) wonderful tutorial on using PhyloSeq and R for Community Diversity Analysis: [Microbial Community Diversity Analysis Tutorial with Phyloseq](http://deneflab.github.io/MicrobeMiseq/demos/mothur_2_phyloseq.html)
-
+* [SeqAnswers](http://seqanswers.com) General help on bioinformatics. Has a [Metagenomics Forum](http://seqanswers.com/forums/forumdisplay.php?f=29)
+* [BioStars](https://www.biostars.org)
 
 ## Regular Courses/Workshops
 
@@ -29,6 +29,15 @@
 * [QIIME Workshops](https://workshops.qiime.org)
 * [EDAMAME](http://www.edamamecourse.org/docs/index.html): Course and Extensive On-line Materials. Organzied in 2014 and 2015.
 * [STAMPS](https://stamps.mbl.edu): Held annually at the Woods Hole Marine Biological Laboratory.
+
+## Publishing R Markdown documents
+
+* [RPubs](https://rpubs.com): Free, simple R Markdown sharing service.
+* [R Notebooks](http://rmarkdown.rstudio.com/r_notebooks.html#overview): Interactive, portable R Markdown documents.
+* [Shiny](http://rmarkdown.rstudio.com/authoring_shiny.html). Publish interactive documents which accept user input.
+* [R Markdown Web sites](http://rmarkdown.rstudio.com/rmarkdown_websites.html): HTML versions of your R Markdown documents with additional features.
+* [bookdown](https://bookdown.org/yihui/bookdown/): Used to generate this book
+* [R presentations](https://support.rstudio.com/hc/en-us/articles/200486468-Authoring-R-Presentations). Make slide decks directly in R Studio
 
 ## Books
 
