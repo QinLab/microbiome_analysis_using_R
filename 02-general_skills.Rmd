@@ -12,12 +12,16 @@ An [Integrated Development Environment](https://en.wikipedia.org/wiki/Integrated
 
 R has several IDE options. The material in this book will focuse on one, [RStudio](https://www.rstudio.com) which is continually supported, updated and tightly integrated with a number of useful R tools. However, there are other several other options listed below. Of note, you do not need an IDE to work with R. In fact, R can be run entirely from the command line which is useful for scripting workflows.
 
-*List of popular R IDEs*
+## List of popular R IDEs
 
 * [RStudio](https://www.rstudio.com)
 * [Microsoft Visual Studio](https://www.rstudio.com)
 * [IntelliJ Plug In](https://plugins.jetbrains.com/plugin/6632-r-language-support)
 * [Rattle](http://rattle.togaware.com)
 * [StatET Plug In for Eclipse](http://www.walware.de/goto/statet)
+
+The value of using an IDE for R can not be overstated. A well-developed IDE, such as RStudio will enable you to work seemlessly with your data, manage your packages and document and publish your work either as a static document or to a web-site.
+
+knitr::include_graphics("./figures/ch02_rstudio_example.jpg")
 
 
