@@ -36,7 +36,7 @@ The concept of *packages* has been brought up throughout this book already. Put 
 
 Between CRAN, Bioconductor and Github you should be pretty well-covered in package discovery and installation. There are slightly different ways to install packages from each resource:
 
-* _CRAN_: There are two ways to install packages from CRAN in RStudio. The first way is from the *Packages* tab which you will see at the top of one of the panes in RStudio:
+* **CRAN:** There are two ways to install packages from CRAN in RStudio. The first way is from the *Packages* tab which you will see at the top of one of the panes in RStudio:
 
 ```{r Figure 1 RStudio Package Installation}
 knitr::include_graphics("./figures/ch02_rstudio_install_packages.png")
@@ -48,7 +48,7 @@ The other way is to use the *install.packages* command from the console. For exa
 install.packages("ade4")
 ```
 
-* _Bioconductor_: Installing packages from Bioconductor requires you to first install Bioconductor using the following commands:
+* **Bioconductor:** Installing packages from Bioconductor requires you to first install Bioconductor using the following commands:
 
 ```{r}
 ## try http:// if https:// URLs are not supported
@@ -64,7 +64,7 @@ source("https://bioconductor.org/biocLite.R")
 biocLite("phyloseq")
 ```
 
-* _Github_: To install packages from Github you first have to install *Developer Tools*. The following series of commands would install Developer Tools and then install *ggplot2* from it's Github repository:
+* **Github:** To install packages from Github you first have to install *Developer Tools*. The following series of commands would install Developer Tools and then install *ggplot2* from it's Github repository:
 
 ```{r}
 install.packages("devtools")
@@ -88,13 +88,76 @@ The above command will load the ggplot2 package into the current R session and i
 
 While there are some nuances to R Markdown documents there are three key principles you should understand before diving in. Once you understand the basics, you can extend your knowledge using the official [R Markdown](http://rmarkdown.rstudio.com/index.html) documentation.
 
-* _Principle 1: Formatting_
+* **Principle 1: Formatting**
 
-[R Markdown](http://rmarkdown.rstudio.com/index.html) is based on the original [Markdown](http://daringfireball.net/projects/markdown/) tool which was designed to provide a simple syntax for writing documents for the web. This simple, code based format makes for an unobstructive writing environment. Formatting is done with mark-up codes instead of using functions in a word processor which makes it easy for other software such as web-browsers or [knitr](https://yihui.name/knitr/) (disussed below) to dissect and recompile into html or PDF documents. 
+[R Markdown](http://rmarkdown.rstudio.com/index.html) is based on the original [Markdown](http://daringfireball.net/projects/markdown/) tool which was designed to provide a simple syntax for writing documents for the web. This simple, code based format makes for an unobstructive writing environment. Formatting is done with mark-up codes instead of using functions in a word processor which makes it easy for other software such as web-browsers or [knitr](https://yihui.name/knitr/) (disussed below) to dissect and recompile into html or PDF documents.
 
-* _Principle 2: The chunk_
+There are a lot of codes available to customize the format of your text (see: [The R Markdown Reference Guide(https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)), but you don't need to memorize all of them to get started. Some basics will be sufficient for getting started.
 
-* _Principle 3: Publishing_
+*italics* are displayed by surrounding the word with single asterisks (\*word\*).
+
+**bold** a word with double asterisks (\*\*word\*\*)
+
+Most importantly, any text you write **outside** of a chunk (described below) is just text. It doesnt do anything at all other than act as plain text. So the areas outside of chunks should be used for exposition and documentation of your analysis.
+
+* **Principle 2: The Chunk**
+
+[R Code Chunks](http://rmarkdown.rstudio.com/authoring_rcodechunks.html) are the real heartbeat of R Markdown documents. Contrary to all of the text outside of an R chunk, text within a R code chunk is treated as code to process analysis, calculate statistics, or generate plots. The basis of a chunk are three backticks and an r in squigly brackets (\`\`\`\{r\}) to start the chunk and three backticks (```) to end it. For example:
+
+```{r}
+
+# This is an example R chunk
+
+```
+
+Everything in between the R chunk identifiers will be run when the entire chunk is run. It is useful to break each step of your analysis into individual chunks. For example, if you want to load a set of libraries at the start of your R analysis you may do something like the following:
+
+```{r Load libraries}
+# Load libraries
+library("ggplot2")
+packageVersion("ggplot2")
+library("phyloseq")
+packageVersion("phyloseq")
+library("magrittr")
+packageVersion("magrittr")
+library("RColorBrewer")
+packageVersion("RColorBrewer")
+library("vegan")
+packageVersion("vegan")
+library("gridExtra")
+packageVersion("gridExtra")
+library("knitr")
+packageVersion("knitr")
+library("dplyr")
+packageVersion("dplyr")
+library("DESeq2")
+packageVersion("DeSeq2")
+library("plotly")
+packageVersion("plotly")
+
+```
+
+All of the commands in this chunk can be run by running the entire chunk. There are options for running the current chunk, all chunks, current line of the chunk and more available at the top of the menu under the *run* tab. It will be worth your time to learn the key bindings for running chunks as you will be regularly updating and rerunning chunks as you work.
+
+You will notice that there are parts of the chunk that start with the # symbol. This is how you tell the R Markdown chunk **not** to run something. So while # Load libraries will be displayed when it is run, due to the # symbol R knows not to process this as a command. This is an additional way to document your code and should be used liberally throughout your R Markdown document creation.
+
+* **Principle 3: Publishing**
+
+Once you know some basics about formatting text and creating R chunks you can combine these two skills to produce reports as either PDF, HTML or Word. Other document types are available as well through other packages, but these three formats are standard.
+
+Report generation is completed by *knit*ing your R Markdown document. This is done using the *knit* button at the top of the R Markdown pane. The processing from R Markdown to another format is done by the [knitr](https://yihui.name/knitr/) package. Knitr provides a number of options for customizing how your reports appear. Many of these options are placed in the R chunk header. For example, the following header will tell knitr to exclude the R chunk from the final document, but to go ahead and run it as part of your analysis. This is useful for sharing reports with collaborators who may not be interested in some of the intermediate analysis that goes along with an analysis. You can also specify figure height and width amongst other things.
+
+You should also name your R chunks to keep them straight. Naming a chunk is easy as it is just any text that appears after the r and before a comma. The name of the following R chunk is *Example R chunk*.
+
+```{r Example R chunk, include=TRUE, fig.width=3, fig.height=3}
+# This R chunk will print a summary of the cars example data set
+# It will also generate a scatterplot of the cars data.
+# To exclude this from the final report change include to FALSE
+summary(cars)
+plot(cars)
+
+```
+
 
 
 
