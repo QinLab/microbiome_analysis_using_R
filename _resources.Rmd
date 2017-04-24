@@ -2,13 +2,13 @@
 
 ## Software Packages
 
-### Exapnsive packages
+### Exapnsive 16S analysis packages
 * [QIIME](http://qiime.org)
 * [QIIME 2](https://qiime2.org)
 * [Mothur](https://www.mothur.org)
 * [PhyloSeq](https://joey711.github.io/phyloseq/)
 
-### R Libraries and others
+### Useful R libraries
 * [vegan](https://cran.r-project.org/web/packages/vegan/index.html): Extensive library of ecological analysis tools.
 * [tidyverse](http://tidyverse.org): includes ggplot2, dplyr and many others.
 * [DeSeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html): Differential abundance testing.
