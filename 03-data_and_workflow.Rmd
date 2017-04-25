@@ -11,4 +11,22 @@ This chapter provides an introduction to the example data used throughout this b
 
 ## Workflow
 
+```{r}
+grViz("
+digraph boxes {
 
+  graph [overlap = true, fontsize = 10]
+
+  node [shape = box,
+        fontname = Helvetica]
+  A; B; C; D; E; F
+
+A->B B->C C->D D->E E->F
+
+}      
+      
+")
+
+
+
+```
