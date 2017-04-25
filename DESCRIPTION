@@ -1,9 +1,5 @@
-Package: Microbiome Analysis Using R
-Title: Microbiome Analysis Using R
-Author: Scott A. Handley (handley.scott@gmail.com)
-Maintainer: Scott A. Handley (handley.scott@gmail.com)
-Date: 2017-04-13
+Package: placeholder
+Title: Does not matter.
 Version: 0.0.1
 Imports: bookdown
 Remotes: rstudio/bookdown
-
