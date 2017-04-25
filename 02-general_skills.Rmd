@@ -112,7 +112,7 @@ Most importantly, any text you write **outside** of a chunk (described below) is
 
 Everything in between the R chunk identifiers will be run when the entire chunk is run. It is useful to break each step of your analysis into individual chunks. For example, if you want to load a set of libraries at the start of your R analysis you may do something like the following:
 
-```{r Load libraries}
+```{r Load libraries, eval=FALSE}
 # Load libraries
 library("ggplot2")
 packageVersion("ggplot2")
