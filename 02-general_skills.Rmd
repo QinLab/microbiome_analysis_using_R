@@ -166,3 +166,7 @@ There are a number of interesting ways to publish or share your work from R Stud
 * [R Markdown Web sites](http://rmarkdown.rstudio.com/rmarkdown_websites.html): HTML versions of your R Markdown documents with additional features.
 * [bookdown](https://bookdown.org/yihui/bookdown/): Used to generate this book
 * [R presentations](https://support.rstudio.com/hc/en-us/articles/200486468-Authoring-R-Presentations). Make slide decks directly in R Studio
+
+## Summary
+
+Taken together, working with a well-developed IDE, understanding how to access packages relevant to your work and developing an efficient system for documenting and publishing your work are critical for the completion of any analysis using R. In particular, the iterative stages of data exploration and statistical testing along with plot generation can be integrated using R IDE's and packages. These iterative steps can be documented as you explore your data using R Markdown and ultimately shared with colleagues and published.
