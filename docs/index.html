@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Microbiome Analysis Using R</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Microbiome analysis using R.">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Microbiome Analysis Using R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Microbiome analysis using R." />
+  <meta name="github-repo" content="shandley/microbiome_analysis_using.R" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Microbiome Analysis Using R" />
+  
+  <meta name="twitter:description" content="Microbiome analysis using R." />
+  
+
+<meta name="author" content="Scott A. Handley">
+
+
+<meta name="date" content="2017-04-13">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="introduction.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"Microbiome Analysis Using R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#what-this-book-is"><i class="fa fa-check"></i><b>1.2</b> What this book is</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#what-this-book-isnt"><i class="fa fa-check"></i><b>1.3</b> What this book isn’t</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="general-skills.html"><a href="general-skills.html"><i class="fa fa-check"></i><b>2</b> General Skills</a><ul>
+<li class="chapter" data-level="2.1" data-path="general-skills.html"><a href="general-skills.html#integrated-development-environment-ide"><i class="fa fa-check"></i><b>2.1</b> Integrated Development Environment (IDE)</a></li>
+<li class="chapter" data-level="2.2" data-path="general-skills.html"><a href="general-skills.html#list-of-popular-r-ides"><i class="fa fa-check"></i><b>2.2</b> List of popular R IDEs</a></li>
+<li class="chapter" data-level="2.3" data-path="general-skills.html"><a href="general-skills.html#packages"><i class="fa fa-check"></i><b>2.3</b> Packages</a></li>
+<li class="chapter" data-level="2.4" data-path="general-skills.html"><a href="general-skills.html#r-markdown"><i class="fa fa-check"></i><b>2.4</b> R Markdown</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-and-workflow.html"><a href="data-and-workflow.html"><i class="fa fa-check"></i><b>3</b> Data and Workflow</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-and-workflow.html"><a href="data-and-workflow.html#data"><i class="fa fa-check"></i><b>3.1</b> Data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-and-workflow.html"><a href="data-and-workflow.html#workflow"><i class="fa fa-check"></i><b>3.2</b> Workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data-assessment-and-filtering.html"><a href="data-assessment-and-filtering.html"><i class="fa fa-check"></i><b>4</b> Data Assessment and Filtering</a></li>
+<li class="chapter" data-level="5" data-path="alpha-diversity.html"><a href="alpha-diversity.html"><i class="fa fa-check"></i><b>5</b> Alpha Diversity</a></li>
+<li class="chapter" data-level="6" data-path="beta-diversity.html"><a href="beta-diversity.html"><i class="fa fa-check"></i><b>6</b> Beta Diversity</a></li>
+<li class="chapter" data-level="7" data-path="differential-abundance-testing.html"><a href="differential-abundance-testing.html"><i class="fa fa-check"></i><b>7</b> Differential Abundance Testing</a></li>
+<li class="chapter" data-level="8" data-path="machine-learning-approaches.html"><a href="machine-learning-approaches.html"><i class="fa fa-check"></i><b>8</b> Machine Learning Approaches</a></li>
+<li class="chapter" data-level="9" data-path="reproducible-workflows.html"><a href="reproducible-workflows.html"><i class="fa fa-check"></i><b>9</b> Reproducible Workflows</a></li>
+<li class="chapter" data-level="10" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>10</b> Resources</a><ul>
+<li class="chapter" data-level="10.1" data-path="resources.html"><a href="resources.html#software-packages"><i class="fa fa-check"></i><b>10.1</b> Software Packages</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="resources.html"><a href="resources.html#exapnsive-16s-analysis-packages"><i class="fa fa-check"></i><b>10.1.1</b> Exapnsive 16S analysis packages</a></li>
+<li class="chapter" data-level="10.1.2" data-path="resources.html"><a href="resources.html#useful-r-libraries"><i class="fa fa-check"></i><b>10.1.2</b> Useful R libraries</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="resources.html"><a href="resources.html#web-sites"><i class="fa fa-check"></i><b>10.2</b> Web sites</a></li>
+<li class="chapter" data-level="10.3" data-path="resources.html"><a href="resources.html#regular-coursesworkshops"><i class="fa fa-check"></i><b>10.3</b> Regular Courses/Workshops</a></li>
+<li class="chapter" data-level="10.4" data-path="resources.html"><a href="resources.html#publishing-r-markdown-documents"><i class="fa fa-check"></i><b>10.4</b> Publishing R Markdown documents</a></li>
+<li class="chapter" data-level="10.5" data-path="resources.html"><a href="resources.html#books"><i class="fa fa-check"></i><b>10.5</b> Books</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Microbiome Analysis Using R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Microbiome Analysis Using R</h1>
+<h4 class="author"><em>Scott A. Handley</em></h4>
+<h4 class="date"><em>2017-04-13</em></h4>
+</div>
+<div id="preface" class="section level1 unnumbered">
+<h1>Preface</h1>
+<p>This book was designed to provide instruction and examples on how to process 16S amplicon data in R for microbial community ecology studies. The material was developed during over a period from Fall 2016 through Summer 2017 and represents a sythesis of material obtained during training at the <a href="http://evomics.org">2017 Workshop on Genomics</a> and through forum posts across the internet. In particular, the <a href="https://joey711.github.io/phyloseq/">PhyloSeq</a> and <a href="https://github.com/benjjneb/dada2">dada2</a> GitHub issues page.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

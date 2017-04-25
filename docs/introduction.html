@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Microbiome Analysis Using R</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Microbiome analysis using R.">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Microbiome Analysis Using R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Microbiome analysis using R." />
+  <meta name="github-repo" content="shandley/microbiome_analysis_using.R" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Microbiome Analysis Using R" />
+  
+  <meta name="twitter:description" content="Microbiome analysis using R." />
+  
+
+<meta name="author" content="Scott A. Handley">
+
+
+<meta name="date" content="2017-04-13">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="general-skills.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"Microbiome Analysis Using R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#what-this-book-is"><i class="fa fa-check"></i><b>1.2</b> What this book is</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#what-this-book-isnt"><i class="fa fa-check"></i><b>1.3</b> What this book isn’t</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="general-skills.html"><a href="general-skills.html"><i class="fa fa-check"></i><b>2</b> General Skills</a><ul>
+<li class="chapter" data-level="2.1" data-path="general-skills.html"><a href="general-skills.html#integrated-development-environment-ide"><i class="fa fa-check"></i><b>2.1</b> Integrated Development Environment (IDE)</a></li>
+<li class="chapter" data-level="2.2" data-path="general-skills.html"><a href="general-skills.html#list-of-popular-r-ides"><i class="fa fa-check"></i><b>2.2</b> List of popular R IDEs</a></li>
+<li class="chapter" data-level="2.3" data-path="general-skills.html"><a href="general-skills.html#packages"><i class="fa fa-check"></i><b>2.3</b> Packages</a></li>
+<li class="chapter" data-level="2.4" data-path="general-skills.html"><a href="general-skills.html#r-markdown"><i class="fa fa-check"></i><b>2.4</b> R Markdown</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-and-workflow.html"><a href="data-and-workflow.html"><i class="fa fa-check"></i><b>3</b> Data and Workflow</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-and-workflow.html"><a href="data-and-workflow.html#data"><i class="fa fa-check"></i><b>3.1</b> Data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-and-workflow.html"><a href="data-and-workflow.html#workflow"><i class="fa fa-check"></i><b>3.2</b> Workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data-assessment-and-filtering.html"><a href="data-assessment-and-filtering.html"><i class="fa fa-check"></i><b>4</b> Data Assessment and Filtering</a></li>
+<li class="chapter" data-level="5" data-path="alpha-diversity.html"><a href="alpha-diversity.html"><i class="fa fa-check"></i><b>5</b> Alpha Diversity</a></li>
+<li class="chapter" data-level="6" data-path="beta-diversity.html"><a href="beta-diversity.html"><i class="fa fa-check"></i><b>6</b> Beta Diversity</a></li>
+<li class="chapter" data-level="7" data-path="differential-abundance-testing.html"><a href="differential-abundance-testing.html"><i class="fa fa-check"></i><b>7</b> Differential Abundance Testing</a></li>
+<li class="chapter" data-level="8" data-path="machine-learning-approaches.html"><a href="machine-learning-approaches.html"><i class="fa fa-check"></i><b>8</b> Machine Learning Approaches</a></li>
+<li class="chapter" data-level="9" data-path="reproducible-workflows.html"><a href="reproducible-workflows.html"><i class="fa fa-check"></i><b>9</b> Reproducible Workflows</a></li>
+<li class="chapter" data-level="10" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>10</b> Resources</a><ul>
+<li class="chapter" data-level="10.1" data-path="resources.html"><a href="resources.html#software-packages"><i class="fa fa-check"></i><b>10.1</b> Software Packages</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="resources.html"><a href="resources.html#exapnsive-16s-analysis-packages"><i class="fa fa-check"></i><b>10.1.1</b> Exapnsive 16S analysis packages</a></li>
+<li class="chapter" data-level="10.1.2" data-path="resources.html"><a href="resources.html#useful-r-libraries"><i class="fa fa-check"></i><b>10.1.2</b> Useful R libraries</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="resources.html"><a href="resources.html#web-sites"><i class="fa fa-check"></i><b>10.2</b> Web sites</a></li>
+<li class="chapter" data-level="10.3" data-path="resources.html"><a href="resources.html#regular-coursesworkshops"><i class="fa fa-check"></i><b>10.3</b> Regular Courses/Workshops</a></li>
+<li class="chapter" data-level="10.4" data-path="resources.html"><a href="resources.html#publishing-r-markdown-documents"><i class="fa fa-check"></i><b>10.4</b> Publishing R Markdown documents</a></li>
+<li class="chapter" data-level="10.5" data-path="resources.html"><a href="resources.html#books"><i class="fa fa-check"></i><b>10.5</b> Books</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Microbiome Analysis Using R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
+<p>16S amplicon surveys have become a common technique for assessing bacterial community composition. The technique has been applied with great success towards understanding how bacterial communities and their individual members are associated various environments. While metagenomic approaches (shotgun sequencing of total nucleic acid extracts) has some major advantages over targeted amplicon sequencing, amplicon sequencing still offers a wealth of knowledge about how bacterial communities are structured at a fraction of the cost, and thus, amplicon based studies remain a practical option for researchers.</p>
+<p>Analysis 16S amplicon survey data has been a standard analysis for over a decade. Surveys can be completed on sparse (acid mine runoff) or dense (soil, human stool) communities. Regardless, the results of such experiments generate complex data sets composed of the information about the presence, relative abundances of and relationships of all detectable bacterial taxa within a community. These data are then associated with environmental factors (e.g. pH, soil depth, patient disease status) and a combination of both exploratory and statistical techniques are applied to determine if community structure or if a specific bacterial taxa is preferentially associated with an environment or state. This end-to-end workflow, beginning with sample collection and study design, proceeding through nucleic acid extraction, library preparation and sequencing requires a large number of decisions and planning by the researcher which ultimately results in a data file on their computer ready for analysis.</p>
+<p>There are a number of well-developed software packages which enable researchers to analyze these frequently complex data sets. In particular, both <a href="http://qiime.org">QIIME</a> <a href="https://www.mothur.org">MOTHUR</a> stand out as applications that have enabled a tremendous amount of research into the investigation of 16S amplicon survey data. At the writing of this introduction, the original <a href="http://www.nature.com/nmeth/journal/v7/n5/full/nmeth.f.303.html">QIIME publication</a> had been cited 7,154 times and the original <a href="http://aem.asm.org/content/75/23/7537.short">MOTHUR publication</a> 6,551 times, quantifying the influence these software packages have had on the research community.</p>
+<p>While both of these software packages are “one-stop-shops” for 16S amplicon survey analysis, they do have some limitations. For example, many of the base graphics resulting from QIIME require post-processing steps in a graphic design program such as Adobe Illustrator or re-processing the data through R and plotting with ggplot2. Or if an analysis has not been developed by the QIIME or MOTHUR development teams then the researcher has to either wait for the analysis to be built into these packages, develop their own software, or find another resource. This later challenge is being addressed by the plug-in capabilities of <a href="https://www.r-project.org">QIIME 2</a>, but there still remains a need for an integrated environment for managing 16S amplicon data, providing both exploratory and statistical analysis all while generating rich reports and plots to aid in the interpretation of results.</p>
+<p>The <a href="https://www.r-project.org">R programming language</a> provides a set of tools to, at least in part, complement analysis generated by these larger software packages. It is indeed possible to complete a study without any knowledge of R, but R does have an extensive history of development of algorithms for assessing community ecology (i.e. the <a href="https://cran.r-project.org/web/packages/vegan/vegan.pdf">Vegan</a> software package original published in 2003) and testing for the differential abundance of taxa between states (i.e. <a href="https://bioconductor.org/packages/release/bioc/html/DESeq2.html">DeSeq2</a> and <a href="https://bioconductor.org/packages/release/bioc/html/metagenomeSeq.html">metagenomeSeq</a>) that are native to R and may be of use to researchers in investigating their 16S amplicon data. In addition, R has extensive support for documenting workflows through the use of R Markdown documents, an integrating native plotting environment and access to an advanced plotting paradigm through ggplot2, and perhaps most importantly, is useful for the analysis of other data types frequently created in research laboratories (RNAseq data, DNAmethylation, and basic statistical analysis). So not only does R provide some useful tools for the analysis of 16S amplicon data, the skills developed in using R for analysis of microbial communities could be applied to analysis of data from other types of studies. For these reasons, R should be considered a valuable tool for researchers investigating bacterial communities.</p>
+<div id="motivation" class="section level2">
+<h2><span class="header-section-number">1.1</span> Motivation</h2>
+<p>This book was written as a result of approximately 1 year of experience using a combination of QIIME and R to analyze 16S amplicon survey data generated to ask questions about what bacterial communities look like on mucosal surfaces of HIV infected patients. In addition, material had been produced for training <a href="http://evomics.org">Workshops</a> over the past several years which made it apparent that a single software solution was not always sufficient for completion of a robust analysis. In the process of researching and training, it became apparent that there were a variety of resources (e.g. vignettes, forum posts). available to assist researchers in pursuing the daunting task of integrating software and algorithmic solutions to their analysis, but these were disparate and frequently challenging to find. Thus, this book represents an effort to synthesize information from these experiences and resources into a cohesive unit with the hopes that others may benefit from this synthesis.</p>
+</div>
+<div id="what-this-book-is" class="section level2">
+<h2><span class="header-section-number">1.2</span> What this book is</h2>
+<p>The material in the book is focused heavily on the use of <a href="https://joey711.github.io/phyloseq/import-data.html">PhyloSeq objects</a>. PhyloSeq objects are a useful way to represent and integrate various types of data (e.g. operational taxonomic units or resolved sequence variant counts, taxonomy at various ranks, study variables and data, phylogenetic trees) into a single resource which can be accessed using functions in PhyloSeq, or extracted from to be used with other R packages (e.g. <a href="http://ggplot2.tidyverse.org/reference/">ggplot2</a>, <a href="https://cran.r-project.org/web/packages/vegan/index.html">vegan</a>). The content is focused on data curation and manipulation, workflow design, analysis tools and plotting not only using the built-in functions within PhyloSeq, but also on pulling data from PhyloSeq objects for use in other packages.</p>
+</div>
+<div id="what-this-book-isnt" class="section level2">
+<h2><span class="header-section-number">1.3</span> What this book isn’t</h2>
+<p>This book is not meant to explain why you should use R over QIIME or MOTHUR or a variety of other options that are available for 16S amplicon survey analysis. Quite contrary to this, it is focused on how R can be used to integrate analysis from a variety of sources and output them to an even wider variety of resources. So the content is meant to be complementary to what is offered in these well-developed software packages.</p>
+<p>This book is also not designed to replace the well-developed <a href="https://joey711.github.io/phyloseq/">PhyloSeq vignettes</a> or other tutorials found around the web. In fact, much of this material was synthesized after going through these same vignettes and tutorials for various research projects and will pull directly from parts of them. Similarly, while it provides some basic material on how to work within R in the chapter on General Skills, it will not be enough material to make you an “R Wizard”. There is vast amounts of material on the web or through University courses that will assist in advanced training in R if you so desire.</p>
+<p>Finally, this book is not designed to provide in-depth explanations of concepts in microbial ecology. That topic requires several books on its own. However, basic introductions to some core concepts are provided for explanatory purposes.</p>
+<p>While this book does not formally cover these concepts, there is an appendix which provides links to various resources used in the creation of the content of this book, or which one may find useful for expanding their own knowledge base.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="general-skills.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

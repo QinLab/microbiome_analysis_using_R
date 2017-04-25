@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Microbiome Analysis Using R</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="Microbiome analysis using R.">
+  <meta name="generator" content="bookdown 0.3 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Microbiome Analysis Using R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Microbiome analysis using R." />
+  <meta name="github-repo" content="shandley/microbiome_analysis_using.R" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Microbiome Analysis Using R" />
+  
+  <meta name="twitter:description" content="Microbiome analysis using R." />
+  
+
+<meta name="author" content="Scott A. Handley">
+
+
+<meta name="date" content="2017-04-13">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="introduction.html">
+<link rel="next" href="data-and-workflow.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"Microbiome Analysis Using R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#motivation"><i class="fa fa-check"></i><b>1.1</b> Motivation</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#what-this-book-is"><i class="fa fa-check"></i><b>1.2</b> What this book is</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#what-this-book-isnt"><i class="fa fa-check"></i><b>1.3</b> What this book isn’t</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="general-skills.html"><a href="general-skills.html"><i class="fa fa-check"></i><b>2</b> General Skills</a><ul>
+<li class="chapter" data-level="2.1" data-path="general-skills.html"><a href="general-skills.html#integrated-development-environment-ide"><i class="fa fa-check"></i><b>2.1</b> Integrated Development Environment (IDE)</a></li>
+<li class="chapter" data-level="2.2" data-path="general-skills.html"><a href="general-skills.html#list-of-popular-r-ides"><i class="fa fa-check"></i><b>2.2</b> List of popular R IDEs</a></li>
+<li class="chapter" data-level="2.3" data-path="general-skills.html"><a href="general-skills.html#packages"><i class="fa fa-check"></i><b>2.3</b> Packages</a></li>
+<li class="chapter" data-level="2.4" data-path="general-skills.html"><a href="general-skills.html#r-markdown"><i class="fa fa-check"></i><b>2.4</b> R Markdown</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="data-and-workflow.html"><a href="data-and-workflow.html"><i class="fa fa-check"></i><b>3</b> Data and Workflow</a><ul>
+<li class="chapter" data-level="3.1" data-path="data-and-workflow.html"><a href="data-and-workflow.html#data"><i class="fa fa-check"></i><b>3.1</b> Data</a></li>
+<li class="chapter" data-level="3.2" data-path="data-and-workflow.html"><a href="data-and-workflow.html#workflow"><i class="fa fa-check"></i><b>3.2</b> Workflow</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="data-assessment-and-filtering.html"><a href="data-assessment-and-filtering.html"><i class="fa fa-check"></i><b>4</b> Data Assessment and Filtering</a></li>
+<li class="chapter" data-level="5" data-path="alpha-diversity.html"><a href="alpha-diversity.html"><i class="fa fa-check"></i><b>5</b> Alpha Diversity</a></li>
+<li class="chapter" data-level="6" data-path="beta-diversity.html"><a href="beta-diversity.html"><i class="fa fa-check"></i><b>6</b> Beta Diversity</a></li>
+<li class="chapter" data-level="7" data-path="differential-abundance-testing.html"><a href="differential-abundance-testing.html"><i class="fa fa-check"></i><b>7</b> Differential Abundance Testing</a></li>
+<li class="chapter" data-level="8" data-path="machine-learning-approaches.html"><a href="machine-learning-approaches.html"><i class="fa fa-check"></i><b>8</b> Machine Learning Approaches</a></li>
+<li class="chapter" data-level="9" data-path="reproducible-workflows.html"><a href="reproducible-workflows.html"><i class="fa fa-check"></i><b>9</b> Reproducible Workflows</a></li>
+<li class="chapter" data-level="10" data-path="resources.html"><a href="resources.html"><i class="fa fa-check"></i><b>10</b> Resources</a><ul>
+<li class="chapter" data-level="10.1" data-path="resources.html"><a href="resources.html#software-packages"><i class="fa fa-check"></i><b>10.1</b> Software Packages</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="resources.html"><a href="resources.html#exapnsive-16s-analysis-packages"><i class="fa fa-check"></i><b>10.1.1</b> Exapnsive 16S analysis packages</a></li>
+<li class="chapter" data-level="10.1.2" data-path="resources.html"><a href="resources.html#useful-r-libraries"><i class="fa fa-check"></i><b>10.1.2</b> Useful R libraries</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="resources.html"><a href="resources.html#web-sites"><i class="fa fa-check"></i><b>10.2</b> Web sites</a></li>
+<li class="chapter" data-level="10.3" data-path="resources.html"><a href="resources.html#regular-coursesworkshops"><i class="fa fa-check"></i><b>10.3</b> Regular Courses/Workshops</a></li>
+<li class="chapter" data-level="10.4" data-path="resources.html"><a href="resources.html#publishing-r-markdown-documents"><i class="fa fa-check"></i><b>10.4</b> Publishing R Markdown documents</a></li>
+<li class="chapter" data-level="10.5" data-path="resources.html"><a href="resources.html#books"><i class="fa fa-check"></i><b>10.5</b> Books</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Microbiome Analysis Using R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="general-skills" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> General Skills</h1>
+<p>The completion of any project in R, microbiome focused or not, will benefit from some basic knowledge of a few tools developed by the R community to help document and expedite your work. This book is not meant to be a replacement for the tremendous number of R tutorials and Workshops currently available (see references for a few recommendations). The reality is that to become proficient at using R will likely take you much longer than you expect. R is a fully developed software language, and like human language, takes many years of immersion to fully develop proficiency.</p>
+<p>That being said, with some limited focus on learning, and with the aid of useful tools and an active support community, even a novice can complete a large number of basic analysis and should not shy away from working with R if their project would benefit from the packages, statistics or plotting made available through R.</p>
+<p>Below are several brief introductions to working efficiently and effectively with R. The topics have been selected to target the microbiome specific topics throughout this book, but are limited in scope. Links are provided for each topic if you wish to expand your knowledge further.</p>
+<div id="integrated-development-environment-ide" class="section level2">
+<h2><span class="header-section-number">2.1</span> Integrated Development Environment (IDE)</h2>
+<p>An <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">Integrated Development Environment</a> (IDE) is a term used by software developers to describe a comprehensive software toolbox for completing projects. An IDE it is single software package which pulls together all of the resources one needs to take a project from beginning to end. So imagine if Microsoft Office had a single software called the Microsoft IDE which combined Word, Excel and PowerPoint into a single software package. This would enable you to document, calculate and present your work all from one piece of software instead of working with them independently.</p>
+<p>R has several IDE options. The material in this book will focus on one, <a href="https://www.rstudio.com">RStudio</a> which is continually supported, updated and tightly integrated with a number of useful R tools. However, there are other several other options listed below. Of note, you do not need an IDE to work with R. In fact, R can be run entirely from the command line which is useful for scripting workflows.</p>
+</div>
+<div id="list-of-popular-r-ides" class="section level2">
+<h2><span class="header-section-number">2.2</span> List of popular R IDEs</h2>
+<ul>
+<li><a href="https://www.rstudio.com">RStudio</a></li>
+<li><a href="https://www.rstudio.com">Microsoft Visual Studio</a></li>
+<li><a href="https://plugins.jetbrains.com/plugin/6632-r-language-support">IntelliJ Plug In</a></li>
+<li><a href="http://rattle.togaware.com">Rattle</a></li>
+<li><a href="http://www.walware.de/goto/statet">StatET Plug In for Eclipse</a></li>
+</ul>
+<p>The value of using an IDE for R can not be overstated. A well-developed IDE, such as RStudio will enable you to work seamlessly with your data, manage your packages and document and publish your work either as a static document or to a web-site.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;./figures/ch02_rstudio_example.jpg&quot;</span>)</code></pre></div>
+<p><img src="./figures/ch02_rstudio_example.jpg" /><!-- --></p>
+<p>RStudio is a popular IDE for several reasons. First, it can be run as a server from a cloud based or local server (<a href="https://www.rstudio.com/products/rstudio-server/">RStudio Server</a>). This is useful if you want to have a number of people in a group work with a single installation or if you need the computing resources available in server/cloud hardware. Second, it provides a friendly front-end to access the R language. Being able to visualize code, files and plots in a single window is incredibly useful for exploring data. Third, it is tightly integrated with a number of useful tools such as <a href="http://rmarkdown.rstudio.com">RMarkdown</a> for documenting your work or <a href="https://shiny.rstudio.com">Shiny</a> for making interactive analysis documents and <a href="https://www.rstudio.com/products/rpackages/">many more useful tools</a>.</p>
+<p>This book was written in RStudio using <a href="https://github.com/rstudio/bookdown">Bookdown</a>. All of the analysis and figures were completed within RStudio as well. You can reproduce all of the analysis using RMarkdown documents. All of this was made much simpler due to the tight integration of these packages within RStudio.</p>
+</div>
+<div id="packages" class="section level2">
+<h2><span class="header-section-number">2.3</span> Packages</h2>
+<p>The concept of <em>packages</em> has been brought up throughout this book already. Put simply, a package can be thought of as an app for analysis. Packages are developed by people from various research communities and deposited either into the official R package repository <a href="https://cran.r-project.org">CRAN</a> or in curated, discipline specific repositories such as <a href="http://bioconductor.org">Bioconductor</a>. More recently a large number of packages are being hosted on <a href="http://github.com">Github</a>.</p>
+<p>Between CRAN, Bioconductor and Github you should be pretty well-covered in package discovery and installation. There are slightly different ways to install packages from each resource:</p>
+<ul>
+<li><strong>CRAN:</strong> There are two ways to install packages from CRAN in RStudio. The first way is from the <em>Packages</em> tab which you will see at the top of one of the panes in RStudio:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="st">&quot;./figures/ch02_rstudio_install_packages.png&quot;</span>)</code></pre></div>
+<p><img src="figures/ch02_rstudio_install_packages.png" width="200" /></p>
+<p>The other way is to use the <em>install.packages</em> command from the console. For example, the following code will install the <em>ade4</em> package.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;ade4&quot;</span>)</code></pre></div>
+<ul>
+<li><strong>Bioconductor:</strong> Installing packages from Bioconductor requires you to first install Bioconductor using the following commands:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## try http:// if https:// URLs are not supported
+<span class="kw">source</span>(<span class="st">&quot;https://bioconductor.org/biocLite.R&quot;</span>)
+<span class="kw">biocLite</span>()</code></pre></div>
+<p>Once bioconductor installs you can install specific libraries. The following command will install the <em>PhyloSeq</em> package which is used extensively in this book.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">## try http:// if https:// URLs are not supported
+<span class="kw">source</span>(<span class="st">&quot;https://bioconductor.org/biocLite.R&quot;</span>)
+<span class="kw">biocLite</span>(<span class="st">&quot;phyloseq&quot;</span>)</code></pre></div>
+<ul>
+<li><strong>Github:</strong> To install packages from Github you first have to install <em>Developer Tools</em>. The following series of commands would install Developer Tools and then install <em>ggplot2</em> from it’s Github repository:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)
+devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">&quot;tidyverse/ggplot2&quot;</span>)</code></pre></div>
+<p>If everything goes smoothly the package will be installed and is ready to use. There can be some package specific issues such as the requirement for a dependency which you may need to read further documentation on at the package web site or by contacting the package author.</p>
+<p>Once you have a package installed you need to load it using the <em>library</em> function in R. Again, this can be done two ways. The first is by checking the box next to the library in the package tab shown in Figure 2. The second is using the <em>library</em> command in the console.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">packageVersion</span>(<span class="st">&quot;ggplot2&quot;</span>)</code></pre></div>
+<pre><code>## [1] &#39;2.2.1.9000&#39;</code></pre>
+<p>The above command will load the ggplot2 package into the current R session and is followed by a second command which will display the library version. Tracking library versions can be useful for reproducing and sharing code so it is a good habit to get into. Although it may seem tedious now, we will see how we can leverage RMarkdown documents to facilitate library loading and versioning.</p>
+</div>
+<div id="r-markdown" class="section level2">
+<h2><span class="header-section-number">2.4</span> R Markdown</h2>
+<p><a href="http://rmarkdown.rstudio.com">RMarkdown</a> is a software package integrated into RStudio which facilitates documentation and reproducibility of your work. RMarkdown documents can be shared with colleageus or published on-line facilitating collaboration and open data sharing.</p>
+<p>While there are some nuances to R Markdown documents there are three key principles you should understand before diving in. Once you understand the basics, you can extend your knowledge using the official <a href="http://rmarkdown.rstudio.com/index.html">R Markdown</a> documentation.</p>
+<ul>
+<li><strong>Principle 1: Formatting</strong></li>
+</ul>
+<p><a href="http://rmarkdown.rstudio.com/index.html">R Markdown</a> is based on the original <a href="http://daringfireball.net/projects/markdown/">Markdown</a> tool which was designed to provide a simple syntax for writing documents for the web. This simple, code based format makes for an unobstructive writing environment. Formatting is done with mark-up codes instead of using functions in a word processor which makes it easy for other software such as web-browsers or <a href="https://yihui.name/knitr/">knitr</a> (disussed below) to dissect and recompile into html or PDF documents.</p>
+<p>There are a lot of codes available to customize the format of your text (see: [The R Markdown Reference Guide(<a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf" class="uri">https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf</a>)), but you don’t need to memorize all of them to get started. Some basics will be sufficient for getting started.</p>
+<p><em>italics</em> are displayed by surrounding the word with single asterisks (*word*).</p>
+<p><strong>bold</strong> a word with double asterisks (**word**)</p>
+<p>Most importantly, any text you write <strong>outside</strong> of a chunk (described below) is just text. It doesnt do anything at all other than act as plain text. So the areas outside of chunks should be used for exposition and documentation of your analysis.</p>
+<ul>
+<li><strong>Principle 2: The Chunk</strong></li>
+</ul>
+<p><a href="http://rmarkdown.rstudio.com/authoring_rcodechunks.html">R Code Chunks</a> are the real heartbeat of R Markdown documents. Contrary to all of the text outside of an R chunk, text within a R code chunk is treated as code to process analysis, calculate statistics, or generate plots. The basis of a chunk are three backticks and an r in squigly brackets (```{r}) to start the chunk and three backticks (```) to end it. For example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This is an example R chunk</span></code></pre></div>
+<p>Everything in between the R chunk identifiers will be run when the entire chunk is run. It is useful to break each step of your analysis into individual chunks. For example, if you want to load a set of libraries at the start of your R analysis you may do something like the following:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Load libraries</span>
+<span class="kw">library</span>(<span class="st">&quot;ggplot2&quot;</span>)
+<span class="kw">packageVersion</span>(<span class="st">&quot;ggplot2&quot;</span>)</code></pre></div>
+<pre><code>## [1] &#39;2.2.1.9000&#39;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;phyloseq&quot;</span>)</code></pre></div>
+<pre><code>## Loading required package: methods</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">packageVersion</span>(<span class="st">&quot;phyloseq&quot;</span>)</code></pre></div>
+<pre><code>## [1] &#39;1.19.1&#39;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;magrittr&quot;</span>)
+<span class="kw">packageVersion</span>(<span class="st">&quot;magrittr&quot;</span>)</code></pre></div>
+<pre><code>## [1] &#39;1.5&#39;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;RColorBrewer&quot;</span>)
+<span class="kw">packageVersion</span>(<span class="st">&quot;RColorBrewer&quot;</span>)</code></pre></div>
+<pre><code>## [1] &#39;1.1.2&#39;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;vegan&quot;</span>)</code></pre></div>
+<pre><code>## Loading required package: permute</code></pre>
+<pre><code>## Loading required package: lattice</code></pre>
+<pre><code>## This is vegan 2.4-3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">packageVersion</span>(<span class="st">&quot;vegan&quot;</span>)</code></pre></div>
+<pre><code>## [1] &#39;2.4.3&#39;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;gridExtra&quot;</span>)
+<span class="kw">packageVersion</span>(<span class="st">&quot;gridExtra&quot;</span>)</code></pre></div>
+<pre><code>## [1] &#39;2.2.1&#39;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;knitr&quot;</span>)
+<span class="kw">packageVersion</span>(<span class="st">&quot;knitr&quot;</span>)</code></pre></div>
+<pre><code>## [1] &#39;1.15.1&#39;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;dplyr&quot;</span>)</code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:gridExtra&#39;:
+## 
+##     combine</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">packageVersion</span>(<span class="st">&quot;dplyr&quot;</span>)</code></pre></div>
+<pre><code>## [1] &#39;0.5.0&#39;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;DESeq2&quot;</span>)</code></pre></div>
+<pre><code>## Loading required package: S4Vectors</code></pre>
+<pre><code>## Warning: package &#39;S4Vectors&#39; was built under R version 3.3.3</code></pre>
+<pre><code>## Loading required package: stats4</code></pre>
+<pre><code>## Loading required package: BiocGenerics</code></pre>
+<pre><code>## Loading required package: parallel</code></pre>
+<pre><code>## 
+## Attaching package: &#39;BiocGenerics&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:parallel&#39;:
+## 
+##     clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+##     clusterExport, clusterMap, parApply, parCapply, parLapply,
+##     parLapplyLB, parRapply, parSapply, parSapplyLB</code></pre>
+<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     combine, intersect, setdiff, union</code></pre>
+<pre><code>## The following object is masked from &#39;package:gridExtra&#39;:
+## 
+##     combine</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     IQR, mad, xtabs</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     anyDuplicated, append, as.data.frame, cbind, colnames,
+##     do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+##     grepl, intersect, is.unsorted, lapply, lengths, Map, mapply,
+##     match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+##     Position, rank, rbind, Reduce, rownames, sapply, setdiff,
+##     sort, table, tapply, union, unique, unsplit, which, which.max,
+##     which.min</code></pre>
+<pre><code>## 
+## Attaching package: &#39;S4Vectors&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     first, rename</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     colMeans, colSums, expand.grid, rowMeans, rowSums</code></pre>
+<pre><code>## Loading required package: IRanges</code></pre>
+<pre><code>## Warning: package &#39;IRanges&#39; was built under R version 3.3.3</code></pre>
+<pre><code>## 
+## Attaching package: &#39;IRanges&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
+## 
+##     collapse, desc, regroup, slice</code></pre>
+<pre><code>## The following object is masked from &#39;package:phyloseq&#39;:
+## 
+##     distance</code></pre>
+<pre><code>## Loading required package: GenomicRanges</code></pre>
+<pre><code>## Warning: package &#39;GenomicRanges&#39; was built under R version 3.3.3</code></pre>
+<pre><code>## Loading required package: GenomeInfoDb</code></pre>
+<pre><code>## Loading required package: SummarizedExperiment</code></pre>
+<pre><code>## Loading required package: Biobase</code></pre>
+<pre><code>## Welcome to Bioconductor
+## 
+##     Vignettes contain introductory material; view with
+##     &#39;browseVignettes()&#39;. To cite Bioconductor, see
+##     &#39;citation(&quot;Biobase&quot;)&#39;, and for packages &#39;citation(&quot;pkgname&quot;)&#39;.</code></pre>
+<pre><code>## 
+## Attaching package: &#39;Biobase&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:phyloseq&#39;:
+## 
+##     sampleNames</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">packageVersion</span>(<span class="st">&quot;DeSeq2&quot;</span>)</code></pre></div>
+<pre><code>## [1] &#39;1.14.1&#39;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;plotly&quot;</span>)</code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;plotly&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:IRanges&#39;:
+## 
+##     slice</code></pre>
+<pre><code>## The following object is masked from &#39;package:S4Vectors&#39;:
+## 
+##     rename</code></pre>
+<pre><code>## The following object is masked from &#39;package:ggplot2&#39;:
+## 
+##     last_plot</code></pre>
+<pre><code>## The following object is masked from &#39;package:stats&#39;:
+## 
+##     filter</code></pre>
+<pre><code>## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     layout</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">packageVersion</span>(<span class="st">&quot;plotly&quot;</span>)</code></pre></div>
+<pre><code>## [1] &#39;4.5.6.9000&#39;</code></pre>
+<p>All of the commands in this chunk can be run by running the entire chunk. There are options for running the current chunk, all chunks, current line of the chunk and more available at the top of the menu under the <em>run</em> tab. It will be worth your time to learn the key bindings for running chunks as you will be regularly updating and rerunning chunks as you work.</p>
+<p>You will notice that there are parts of the chunk that start with the # symbol. This is how you tell the R Markdown chunk <strong>not</strong> to run something. So while # Load libraries will be displayed when it is run, due to the # symbol R knows not to process this as a command. This is an additional way to document your code and should be used liberally throughout your R Markdown document creation.</p>
+<ul>
+<li><strong>Principle 3: Publishing</strong></li>
+</ul>
+<p>Once you know some basics about formatting text and creating R chunks you can combine these two skills to produce reports as either PDF, HTML or Word. Other document types are available as well through other packages, but these three formats are standard.</p>
+<p>Report generation is completed by <em>knit</em>ing your R Markdown document. This is done using the <em>knit</em> button at the top of the R Markdown pane. The processing from R Markdown to another format is done by the <a href="https://yihui.name/knitr/">knitr</a> package. Knitr provides a number of options for customizing how your reports appear. Many of these options are placed in the R chunk header. For example, the following header will tell knitr to exclude the R chunk from the final document, but to go ahead and run it as part of your analysis. This is useful for sharing reports with collaborators who may not be interested in some of the intermediate analysis that goes along with an analysis. You can also specify figure height and width amongst other things.</p>
+<p>You should also name your R chunks to keep them straight. Naming a chunk is easy as it is just any text that appears after the r and before a comma. The name of the following R chunk is <em>Example R chunk</em>.</p>
+<p>```</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># This R chunk will print a summary of the cars example data set</span>
+<span class="co"># It will also generate a scatterplot of the cars data.</span>
+<span class="co"># To exclude this from the final report change include to FALSE</span>
+
+<span class="kw">summary</span>(cars)</code></pre></div>
+<pre><code>##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(cars)</code></pre></div>
+<p><img src="02-general_skills_files/figure-html/Example%20R%20chunk-1.png" width="288" /> ```</p>
+<p>There are a number of interesting ways to publish or share your work from R Studio including geneating web sites or interactive notebooks. This book will not detail them further, but more information can be found using the links below:</p>
+<ul>
+<li><a href="https://rpubs.com">RPubs</a>: Free, simple R Markdown sharing service.</li>
+<li><a href="http://rmarkdown.rstudio.com/r_notebooks.html#overview">R Notebooks</a>: Interactive, portable R Markdown documents.</li>
+<li><a href="http://rmarkdown.rstudio.com/authoring_shiny.html">Shiny</a>. Publish interactive documents which accept user input.</li>
+<li><a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html">R Markdown Web sites</a>: HTML versions of your R Markdown documents with additional features.</li>
+<li><a href="https://bookdown.org/yihui/bookdown/">bookdown</a>: Used to generate this book</li>
+<li><a href="https://support.rstudio.com/hc/en-us/articles/200486468-Authoring-R-Presentations">R presentations</a>. Make slide decks directly in R Studio</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-and-workflow.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
