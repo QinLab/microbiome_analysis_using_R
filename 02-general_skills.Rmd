@@ -44,13 +44,13 @@ knitr::include_graphics("./figures/ch02_rstudio_install_packages.png")
 
 The other way is to use the *install.packages* command from the console. For example, the following code will install the *ade4* package.
 
-```{r}
+```{r Install ade4, eval=FALSE}
 install.packages("ade4")
 ```
 
 * **Bioconductor:** Installing packages from Bioconductor requires you to first install Bioconductor using the following commands:
 
-```{r}
+```{r Install Bioconductor, eval=FALSE}
 ## try http:// if https:// URLs are not supported
 source("https://bioconductor.org/biocLite.R")
 biocLite()
@@ -58,7 +58,7 @@ biocLite()
 
 Once bioconductor installs you can install specific libraries. The following command will install the *PhyloSeq* package which is used extensively in this book.
 
-```{r}
+```{r Install PhyloSeq, eval=FALSE}
 ## try http:// if https:// URLs are not supported
 source("https://bioconductor.org/biocLite.R")
 biocLite("phyloseq")
@@ -66,7 +66,7 @@ biocLite("phyloseq")
 
 * **Github:** To install packages from Github you first have to install *Developer Tools*. The following series of commands would install Developer Tools and then install *ggplot2* from it's Github repository:
 
-```{r}
+```{r Install ggplot2, eval=FALSE}
 install.packages("devtools")
 devtools::install_github("tidyverse/ggplot2")
 ```
@@ -75,9 +75,9 @@ If everything goes smoothly the package will be installed and is ready to use. T
 
 Once you have a package installed you need to load it using the *library* function in R. Again, this can be done two ways. The first is by checking the box next to the library in the package tab shown in Figure 2. The second is using the *library* command in the console.
 
-```{r}
+```{r Initiate ggplot2}
 library(ggplot2)
-package.version("ggplot2")
+packageVersion("ggplot2")
 ```
 
 The above command will load the ggplot2 package into the current R session and is followed by a second command which will display the library version. Tracking library versions can be useful for reproducing and sharing code so it is a good habit to get into. Although it may seem tedious now, we will see how we can leverage RMarkdown documents to facilitate library loading and versioning.
@@ -104,7 +104,7 @@ Most importantly, any text you write **outside** of a chunk (described below) is
 
 [R Code Chunks](http://rmarkdown.rstudio.com/authoring_rcodechunks.html) are the real heartbeat of R Markdown documents. Contrary to all of the text outside of an R chunk, text within a R code chunk is treated as code to process analysis, calculate statistics, or generate plots. The basis of a chunk are three backticks and an r in squigly brackets (\`\`\`\{r\}) to start the chunk and three backticks (```) to end it. For example:
 
-```{r}
+```{r This is an example R chunk}
 
 # This is an example R chunk
 
@@ -168,13 +168,3 @@ There are a number of interesting ways to publish or share your work from R Stud
 * [R Markdown Web sites](http://rmarkdown.rstudio.com/rmarkdown_websites.html): HTML versions of your R Markdown documents with additional features.
 * [bookdown](https://bookdown.org/yihui/bookdown/): Used to generate this book
 * [R presentations](https://support.rstudio.com/hc/en-us/articles/200486468-Authoring-R-Presentations). Make slide decks directly in R Studio
-
-
-
-
-
-
-
-
-
-
