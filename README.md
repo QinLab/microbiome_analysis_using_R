@@ -24,35 +24,35 @@ The content is designed to piece together disparate packets of knowledge gathere
   * Importing and checking count tables
   * Working with metadata
 
-## 4. Data Assesmment and Filtering
+## 4. Reproducible Workflows
+
+  * RMarkdown
+  * Integrating with GitHub
+
+## 5. Data Assesmment and Filtering
 
   * Sample Filtering
   * Taxon Prevalence Filtering
   * Data Transformation
   
-## 5. Alpha Diversity
+## 6. Alpha Diversity
 
   * Alpha diversity and catergorical variables
   * Alpha diversity and regression along continuous variables
 
-## 6. Beta Diversity
+## 7. Beta Diversity
 
   * Distance measures
   * Ordination
 
-## 7. Differential Abundance Testing
+## 8. Differential Abundance Testing
 
   * DeSeq2
   * ALDeX
   * Ground Truth Plots
 
-## 8. Machine Learning Approaches
+## 9. Machine Learning Approaches
 
   * Random Forest
-
-## 9. Reproducible Workflows
-
-  * RMarkdown
-  * Integrating with GitHub
 
 ## 10. Citations
