@@ -21,6 +21,8 @@ The content is designed to piece together disparate packets of knowledge gathere
   * Useful Libraries
   
 ## 3. Data Initiation
+  * Importing and checking count tables
+  * Working with metadata
 
 ## 4. Data Assesmment and Filtering
 
@@ -30,7 +32,13 @@ The content is designed to piece together disparate packets of knowledge gathere
   
 ## 5. Alpha Diversity
 
+  * Alpha diversity and catergorical variables
+  * Alpha diversity and regression along continuous variables
+
 ## 6. Beta Diversity
+
+  * Distance measures
+  * Ordination
 
 ## 7. Differential Abundance Testing
 
@@ -40,6 +48,11 @@ The content is designed to piece together disparate packets of knowledge gathere
 
 ## 8. Machine Learning Approaches
 
+  * Random Forest
+
 ## 9. Reproducible Workflows
+
+  * RMarkdown
+  * Integrating with GitHub
 
 ## 10. Citations
